@@ -25,15 +25,21 @@ html {
 }
 
 body {
+    letter-spacing: 1px;
     height: 100%;
     background-color: var(--bkg-2);
     font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-columns: 460px 1fr;
+}
+
+hr {
+    border: 1px solid var(--seperator-clr);
 }
 
 .sidebar {
     font-size: 3.2rem;
     font-weight: 600;
-    letter-spacing: 1px;
     height: 100%;
     width: 460px;
     padding: 36px 0;
@@ -59,7 +65,6 @@ body {
 
 .sidebar .logo-info h1 {
     font-size: 4.8rem;
-    letter-spacing: 1px;
 }
 
 .sidebar nav ul {
@@ -88,16 +93,15 @@ body {
     margin: 0 24%;
     background-color: var(--txt-1);
     color: var(--bkg-1);
-    border: 3px solid var(--txt-1);
+    border: none;
     border-radius: 15px;
     outline: none;
     cursor: pointer;
-    transition: 0.1s;
+    transition: 0.25s;
 }
 
 .sidebar .addbook-btn:hover {
-    background-color: transparent;
-    color: var(--txt-1);
+    transform: scale(1.05);
 }
 
 .sidebar footer p,
@@ -109,4 +113,62 @@ body {
 
 .sidebar footer p a:hover {
     text-decoration: underline;
+}
+
+main {
+    margin: 100px 150px 0;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap: 50px;
+}
+
+main img {
+    cursor: pointer;
+}
+
+main img:hover {
+    transform: scale(1.05);
+}
+
+main .layout-info {
+    padding: 0 50px 0 25px;
+    height: 150px;
+    font-size: 3rem;
+    font-weight: 600;
+    background-color: var(--bkg-1);
+    color: var(--txt-1);
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 100px;
+}
+
+main .layout-info .layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+main .book {
+    padding: 0 50px 0 25px;
+    height: 150px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--txt-2);
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 100px;
+}
+
+main .book .properties {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
 }
